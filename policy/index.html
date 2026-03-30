@@ -13,81 +13,189 @@
       --white: #ffffff; --bg: #f4f8ff; --text: #1c2b4a; --muted: #5a718a;
       --border: #dde8f7;
     }
-    body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; display: flex; flex-direction: column; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
 
     .doc-header {
       background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue-main) 100%);
       padding: 48px 24px 52px;
       text-align: center;
     }
+
     .doc-header .back {
-      display: inline-flex; align-items: center; gap: 6px;
-      color: rgba(255,255,255,.65); text-decoration: none;
-      font-size: .85rem; font-family: 'Sora', sans-serif;
-      margin-bottom: 20px; transition: color .2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: rgba(255,255,255,.72);
+      text-decoration: none;
+      font-size: .85rem;
+      font-family: 'Sora', sans-serif;
+      margin-bottom: 20px;
+      transition: color .2s;
     }
+
     .doc-header .back:hover { color: var(--pink); }
+
     .doc-header h1 {
-      font-family: 'Sora', sans-serif; font-size: clamp(1.6rem, 4vw, 2.2rem);
-      font-weight: 800; color: #fff; margin-bottom: 8px;
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 8px;
     }
-    .doc-header .subtitle { color: rgba(255,255,255,.65); font-size: .9rem; }
+
+    .doc-header .subtitle {
+      color: rgba(255,255,255,.72);
+      font-size: .9rem;
+    }
+
     .doc-header .tag {
-      display: inline-block; background: rgba(255,77,166,.2); border: 1px solid rgba(255,77,166,.4);
-      color: #ff79bf; font-size: .72rem; font-weight: 600; letter-spacing: .1em;
-      text-transform: uppercase; padding: 4px 12px; border-radius: 999px; margin-bottom: 16px;
+      display: inline-block;
+      background: rgba(255,77,166,.2);
+      border: 1px solid rgba(255,77,166,.4);
+      color: #ff79bf;
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 16px;
       font-family: 'Sora', sans-serif;
     }
 
     main {
-      max-width: 780px; margin: 0 auto; padding: 52px 28px 72px; flex: 1;
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 52px 28px 72px;
+      flex: 1;
     }
 
     .meta-box {
-      background: var(--white); border: 1.5px solid var(--border);
-      border-radius: 14px; padding: 20px 24px; margin-bottom: 40px;
-      display: flex; flex-wrap: wrap; gap: 18px;
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin-bottom: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
     }
-    .meta-item { font-size: .85rem; color: var(--muted); }
-    .meta-item strong { color: var(--blue-dark); display: block; font-family: 'Sora', sans-serif; font-size: .8rem; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 2px; }
+
+    .meta-item {
+      font-size: .85rem;
+      color: var(--muted);
+    }
+
+    .meta-item strong {
+      color: var(--blue-dark);
+      display: block;
+      font-family: 'Sora', sans-serif;
+      font-size: .8rem;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      margin-bottom: 2px;
+    }
 
     h2 {
-      font-family: 'Sora', sans-serif; font-size: 1.15rem; font-weight: 700;
-      color: var(--blue-dark); margin: 40px 0 12px;
-      padding-bottom: 8px; border-bottom: 2px solid var(--border);
+      font-family: 'Sora', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--blue-dark);
+      margin: 40px 0 12px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--border);
     }
+
     h2:first-of-type { margin-top: 0; }
 
-    p { font-size: .97rem; line-height: 1.78; color: var(--text); margin-bottom: 14px; }
-    ul { margin: 8px 0 14px 20px; }
-    li { font-size: .97rem; line-height: 1.78; color: var(--text); margin-bottom: 6px; }
+    p {
+      font-size: .97rem;
+      line-height: 1.78;
+      color: var(--text);
+      margin-bottom: 14px;
+    }
+
+    ul {
+      margin: 8px 0 14px 20px;
+    }
+
+    li {
+      font-size: .97rem;
+      line-height: 1.78;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
 
     .highlight-box {
-      background: rgba(31,93,176,.06); border-left: 4px solid var(--blue-main);
-      border-radius: 0 10px 10px 0; padding: 16px 20px; margin: 20px 0;
+      background: rgba(31,93,176,.06);
+      border-left: 4px solid var(--blue-main);
+      border-radius: 0 10px 10px 0;
+      padding: 16px 20px;
+      margin: 20px 0;
     }
-    .highlight-box p { margin: 0; color: var(--blue-dark); font-weight: 500; }
+
+    .highlight-box p {
+      margin: 0;
+      color: var(--blue-dark);
+      font-weight: 500;
+    }
 
     .pink-box {
-      background: rgba(255,77,166,.06); border-left: 4px solid var(--pink);
-      border-radius: 0 10px 10px 0; padding: 16px 20px; margin: 20px 0;
+      background: rgba(255,77,166,.06);
+      border-left: 4px solid var(--pink);
+      border-radius: 0 10px 10px 0;
+      padding: 16px 20px;
+      margin: 20px 0;
     }
-    .pink-box p { margin: 0; color: #b5005a; font-weight: 500; }
 
-    a { color: var(--blue-main); text-decoration: none; }
-    a:hover { text-decoration: underline; color: var(--pink); }
+    .pink-box p {
+      margin: 0;
+      color: #b5005a;
+      font-weight: 500;
+    }
+
+    code {
+      background: #eef4ff;
+      padding: 2px 6px;
+      border-radius: 6px;
+      font-size: .92em;
+    }
+
+    a {
+      color: var(--blue-main);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: var(--pink);
+    }
 
     footer {
-      background: var(--blue-dark); color: rgba(255,255,255,.55);
-      text-align: center; padding: 22px 24px; font-size: .82rem;
+      background: var(--blue-dark);
+      color: rgba(255,255,255,.58);
+      text-align: center;
+      padding: 22px 24px;
+      font-size: .82rem;
     }
-    footer strong { color: rgba(255,255,255,.85); }
+
+    footer strong {
+      color: rgba(255,255,255,.88);
+    }
   </style>
 </head>
 <body>
 
 <div class="doc-header">
-  <div><a class="back" href="index.html">← Back to Documentation</a></div>
+  <div><a class="back" href="../">← Back to Documentation</a></div>
   <div class="tag">Legal Document</div>
   <h1>Privacy Policy</h1>
   <p class="subtitle">Elephant Bet – Sports Events &nbsp;·&nbsp; ARVO MOBILE LTD</p>
@@ -98,146 +206,206 @@
     <div class="meta-item"><strong>Application</strong>Elephant Bet – Sports Events</div>
     <div class="meta-item"><strong>Package Name</strong>com.arvomobile.elephantbet</div>
     <div class="meta-item"><strong>Developer</strong>ARVO MOBILE LTD</div>
-    <div class="meta-item"><strong>Effective Date</strong>January 1, 2025</div>
+    <div class="meta-item"><strong>Effective Date</strong>March 26, 2026</div>
     <div class="meta-item"><strong>Minimum Age</strong>18+</div>
   </div>
 
   <h2>1. Introduction</h2>
   <p>
-    ARVO MOBILE LTD ("we," "us," or "our") operates the mobile application
+    ARVO MOBILE LTD ("we", "us", or "our") operates the mobile application
     <strong>Elephant Bet – Sports Events</strong> (package name:
-    <code>com.arvomobile.elephantbet</code>). This Privacy Policy explains our
-    practices regarding information when you use our Application.
+    <code>com.arvomobile.elephantbet</code>) (the "Application").
+    This Privacy Policy explains what information may be processed when you use
+    the Application, how that information is used, and what rights may be
+    available to you under applicable law.
   </p>
   <p>
-    We are committed to protecting the privacy of our users. Please read this
-    document carefully to understand our approach to privacy and your rights as
-    a user of our Application.
+    We are committed to transparency and to handling user information in a manner
+    consistent with applicable privacy laws and platform requirements.
   </p>
 
   <div class="pink-box">
-    <p>⚠️ This application is intended exclusively for users who are 18 years of age or older. By using the Application, you confirm that you meet this age requirement.</p>
+    <p>
+      ⚠️ This Application is intended only for users who are 18 years of age or older.
+      By downloading, accessing, or using the Application, you represent that you are at least 18 years old.
+    </p>
   </div>
 
-  <h2>2. Information We Collect</h2>
+  <h2>2. Summary of Our Data Practices</h2>
   <div class="highlight-box">
-    <p>🔒 Elephant Bet – Sports Events does <strong>not collect, store, process, or transmit any personal data</strong> from its users. We do not gather any information that can identify you personally.</p>
+    <p>
+      Elephant Bet – Sports Events is designed to operate without requiring account registration
+      or direct collection of personal information by ARVO MOBILE LTD for ordinary app use.
+      However, the Application includes a third-party customer support/chat solution (Crisp Chat SDK),
+      and if you choose to contact support through that feature, certain information may be processed
+      in order to provide and manage support communications.
+    </p>
   </div>
   <p>
-    Specifically, we do <strong>not</strong> collect:
+    In other words:
   </p>
   <ul>
-    <li>Personal identification information (name, email address, phone number, etc.)</li>
-    <li>Device identifiers (IMEI, advertising ID, etc.)</li>
-    <li>Location data (GPS coordinates, IP address, or region)</li>
-    <li>Usage statistics, behavioral analytics, or in-app activity logs</li>
-    <li>Financial information of any kind</li>
-    <li>Contacts, photos, camera, or microphone data</li>
-    <li>Health or biometric data</li>
-    <li>Demographic information</li>
+    <li>We do not require you to create an account to use the Application.</li>
+    <li>We do not sell your personal information.</li>
+    <li>We do not use advertising SDKs.</li>
+    <li>We do not use personal data for personalized advertising.</li>
+    <li>We may process limited information when you voluntarily use the in-app support/chat feature provided by Crisp.</li>
   </ul>
 
-  <h2>3. Data Sharing and Disclosure</h2>
+  <h2>3. Information We May Process</h2>
   <p>
-    Because we do not collect any personal data, we do not share, sell, rent,
-    trade, or otherwise disclose any user information to third parties — whether
-    for commercial purposes, legal compliance, or any other reason.
+    For normal use of the Application, we do not intentionally request personal information such as
+    your full name, home address, payment card data, contacts, photos, microphone recordings, or precise location.
   </p>
   <p>
-    We do not engage any third-party analytics providers, advertising networks,
-    data brokers, or any other entities that would receive data about you in
-    connection with your use of this Application.
-  </p>
-
-  <h2>4. Third-Party Services</h2>
-  <p>
-    The Application does not integrate third-party SDKs or services that collect
-    personal data. We do not use:
+    If you choose to interact with our support feature powered by <strong>Crisp Chat SDK</strong>,
+    the following categories of information may be processed depending on what you choose to submit
+    and how the service operates:
   </p>
   <ul>
-    <li>Google Analytics, Firebase Analytics, or similar analytics tools</li>
-    <li>Advertising SDKs (AdMob, Meta Audience Network, etc.)</li>
-    <li>Crash reporting services that transmit personal data</li>
-    <li>Social login or social sharing integrations</li>
+    <li>Support messages and message content that you voluntarily send</li>
+    <li>Any contact details you voluntarily provide in a support conversation, such as an email address</li>
+    <li>Technical and device-related information reasonably necessary to operate, secure, and deliver the chat/support service</li>
+    <li>Diagnostic or service metadata associated with support interactions</li>
+  </ul>
+  <p>
+    Please do not send sensitive personal information through support chat unless it is strictly necessary.
+  </p>
+
+  <h2>4. How We Use Information</h2>
+  <p>
+    Any information processed through the Application is used only for legitimate operational purposes,
+    including:
+  </p>
+  <ul>
+    <li>Providing the Application’s features</li>
+    <li>Responding to support requests and communicating with users who contact us</li>
+    <li>Maintaining the security, integrity, and technical operation of the Application</li>
+    <li>Complying with legal obligations, when applicable</li>
+  </ul>
+  <p>
+    We do not use information collected through the Application for selling user data or for
+    personalized advertising.
+  </p>
+
+  <h2>5. Third-Party Services and SDKs</h2>
+  <p>
+    The Application includes the following third-party service:
+  </p>
+  <ul>
+    <li><strong>Crisp Chat SDK</strong> – used to provide in-app customer support and communication functionality</li>
+  </ul>
+  <p>
+    When you use the support/chat feature, relevant information may be processed by Crisp on our behalf
+    in accordance with their own privacy and security practices. We encourage you to review Crisp’s privacy information:
+    <a href="https://crisp.chat/en/privacy/" target="_blank" rel="noopener noreferrer">Crisp Privacy Policy</a>.
+  </p>
+  <p>
+    Aside from the support/chat function described above, we do not state that the Application includes
+    advertising SDKs or analytics tools unless such services are actually present in the released build.
+  </p>
+
+  <h2>6. Data Sharing and Disclosure</h2>
+  <p>
+    We do not sell or rent personal information. We may share information only in the limited situations
+    described below:
+  </p>
+  <ul>
+    <li>With service providers that help us operate the Application, such as Crisp for customer support functionality</li>
+    <li>When required by law, regulation, legal process, or enforceable governmental request</li>
+    <li>To protect the rights, safety, security, and integrity of users, our services, or the public</li>
+    <li>In connection with a business transaction such as a merger, acquisition, or asset transfer, where legally permitted</li>
   </ul>
 
-  <h2>5. Permissions</h2>
+  <h2>7. Permissions</h2>
   <p>
-    The Application requests only the minimum device permissions necessary for
-    its core functionality. Any permissions granted by you are used solely to
-    enable the features of the Application and are not used to collect or
-    transmit personal data.
+    The Application should request only those permissions that are necessary for its declared functionality.
+    We do not state that a permission is collected or used for unrelated purposes.
+  </p>
+  <p>
+    If future versions of the Application request additional permissions, this Privacy Policy and the
+    corresponding Google Play disclosures should be updated to reflect those changes before or at the time of release.
   </p>
 
-  <h2>6. Children's Privacy</h2>
+  <h2>8. Data Retention</h2>
   <p>
-    This Application is strictly intended for adults aged 18 and over. We do not
-    knowingly allow anyone under the age of 18 to use the Application. If you
-    are under 18, please do not download or use this Application.
+    We retain information only for as long as necessary for the purposes described in this Privacy Policy,
+    including support, security, legal compliance, and dispute resolution.
   </p>
   <p>
-    Since we do not collect any data whatsoever, there is no risk of accidental
-    collection of data from minors. However, if you believe a person under 18
-    has used this Application, please contact us at
+    Information submitted through Crisp support channels may be retained by Crisp and by us for support
+    history, security, and operational continuity, subject to applicable law and the retention practices
+    of that service provider.
+  </p>
+
+  <h2>9. International Data Transfers</h2>
+  <p>
+    Depending on where you are located and how our service providers operate, information may be processed
+    in countries other than your own. Where required, we take reasonable steps to ensure that such transfers
+    are subject to appropriate safeguards under applicable law.
+  </p>
+
+  <h2>10. Children’s Privacy</h2>
+  <p>
+    This Application is not directed to children and is intended only for adults aged 18 and over.
+    We do not knowingly target or solicit children.
+  </p>
+  <p>
+    If you believe that a person under the age of 18 has used the Application or provided information
+    through it, please contact us at
     <a href="mailto:dev@arvomobile.com">dev@arvomobile.com</a>.
   </p>
 
-  <h2>7. Data Security</h2>
+  <h2>11. Security</h2>
   <p>
-    We take data security seriously. Because the Application does not collect or
-    store any personal information, there is no personal data at risk within our
-    systems. No data is transmitted from the Application to our servers or any
-    third-party servers.
+    We take reasonable administrative, technical, and organizational measures designed to protect information
+    against unauthorized access, loss, misuse, or alteration. However, no method of transmission over the
+    internet or electronic storage is completely secure, and we cannot guarantee absolute security.
   </p>
 
-  <h2>8. Your Privacy Rights</h2>
+  <h2>12. Your Rights</h2>
   <p>
-    Depending on your jurisdiction, you may have rights regarding your personal
-    data under applicable laws (such as GDPR in the European Union or CCPA in
-    California). Since we do not collect any personal data, there is no data
-    to access, correct, delete, or port.
+    Depending on your location, you may have certain privacy rights under applicable law, including the right
+    to request access to, correction of, deletion of, or restriction of personal information, and the right to
+    object to certain processing activities.
   </p>
   <p>
-    If you have any questions or concerns about your privacy rights, please
-    contact us using the details in Section 11.
-  </p>
-
-  <h2>9. Google Play and Platform Policies</h2>
-  <p>
-    This Application is distributed via the Google Play Store and complies fully
-    with Google Play's Developer Program Policies, including the User Data Policy.
-    We have made our data practices transparent in this Privacy Policy and in the
-    Google Play Store data safety declaration.
+    Because the amount of personal information we directly process may be limited, the scope of available rights
+    may depend on the specific context in which you contacted us or used a support feature. To exercise any
+    applicable rights, contact us using the details below.
   </p>
 
-  <h2>10. Changes to This Privacy Policy</h2>
+  <h2>13. Google Play and Platform Compliance</h2>
   <p>
-    We may update this Privacy Policy from time to time. Any changes will be
-    reflected on this page with a revised effective date. We encourage you to
-    review this Privacy Policy periodically. Continued use of the Application
-    after changes are posted constitutes your acceptance of the revised policy.
-  </p>
-  <p>
-    Since we do not collect user email addresses, we cannot notify users of
-    changes directly. All updates will be made available on this page.
+    We intend to keep our privacy disclosures consistent with applicable Google Play requirements, including
+    Google Play’s User Data and Data Safety requirements. Our Google Play data safety declarations should reflect
+    the actual behavior of the released Application, including relevant third-party SDK behavior where applicable.
   </p>
 
-  <h2>11. Contact Us</h2>
+  <h2>14. Changes to This Privacy Policy</h2>
   <p>
-    If you have any questions, concerns, or requests regarding this Privacy
-    Policy or our privacy practices, please contact us at:
+    We may update this Privacy Policy from time to time to reflect operational, legal, or regulatory changes.
+    When we do, we will revise the effective date at the top of this page.
+  </p>
+  <p>
+    Your continued use of the Application after an updated Privacy Policy becomes effective means that you
+    acknowledge the revised version, to the extent permitted by law.
+  </p>
+
+  <h2>15. Contact Us</h2>
+  <p>
+    If you have any questions, concerns, or privacy-related requests, please contact us:
   </p>
   <ul>
     <li><strong>Company:</strong> ARVO MOBILE LTD</li>
     <li><strong>Application:</strong> Elephant Bet – Sports Events</li>
     <li><strong>Email:</strong> <a href="mailto:dev@arvomobile.com">dev@arvomobile.com</a></li>
   </ul>
-  <p>We will do our best to respond to your inquiry promptly.</p>
 </main>
 
 <footer>
-  <strong>ARVO MOBILE LTD</strong> &nbsp;·&nbsp; All rights reserved &nbsp;·&nbsp; © 2025
+  <strong>ARVO MOBILE LTD</strong> &nbsp;·&nbsp; All rights reserved &nbsp;·&nbsp; © 2026
 </footer>
 
 </body>
-</html>
+</html> 
